@@ -1,6 +1,6 @@
-﻿namespace MasterclassLibrary
+﻿namespace MasterclassLibrary.Section2
 {
-    public class StringChallenge1
+    public class DifferentStringOutputs
     {
         public List<string> PrintDifferentStringOuputs(string input)
         {

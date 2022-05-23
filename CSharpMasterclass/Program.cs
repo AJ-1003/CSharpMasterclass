@@ -1,26 +1,55 @@
-﻿using MasterclassLibrary;
+﻿using CSharpMasterclass;
+using static System.Net.Mime.MediaTypeNames;
 
-/* ========================< Assignment 1 >======================== */
-string stringForFloat = "0,85"; // datatype should be float
-string stringForInt = "12345"; // datatype should be int
+var exerciseChoice = new ChooseExercises();
+string input;
+int numberOfTests = 1;
 
-var floatOutput = float.Parse(stringForFloat);
-var intOutput = int.Parse(stringForInt);
-
-Console.WriteLine($"The float value is {floatOutput}");
-Console.WriteLine($"The int value is {intOutput}");
-Console.WriteLine();
-
-/* ------------------------< Challenge 1 >------------------------ */
-var stringOutput = new StringChallenge1();
-string userInput;
-
-Console.WriteLine("Please enter your name and press 'Enter'.");
-Console.Write("-> ");
-userInput = Console.ReadLine();
-
-var result = stringOutput.PrintDifferentStringOuputs(userInput);
-foreach (var item in result)
+do
 {
-    Console.WriteLine(item);
-}
+    if (numberOfTests > 1)
+    {
+        Console.WriteLine();
+    }
+    Console.WriteLine($"Choose the area that needs to be tested or press 'Q' to exit: ({numberOfTests})");
+    Console.WriteLine(
+        "1: Section 2\n" +
+        "2: Section 3\n" +
+        "3: Section 4" +
+        "4: Section 5");
+
+    Console.Write("-> ");
+    input = Console.ReadLine();
+
+    if (input == "1" || input == "2" || input == "3" || input == "4")
+    {
+        switch (input)
+        {
+            case "1":
+                Console.WriteLine();
+                exerciseChoice.ChooseExercise(input, 3);
+                break;
+            case "2":
+                Console.WriteLine();
+                exerciseChoice.ChooseExercise(input, 1);
+                break;
+            case "3":
+                Console.WriteLine();
+                exerciseChoice.ChooseExercise(input, 3);
+                break;
+            case "4":
+                Console.WriteLine();
+                exerciseChoice.ChooseExercise(input, 1);
+                break;
+            default:
+                break;
+        }
+        numberOfTests++;
+    }
+    else if (input != "q")
+    {
+        Console.WriteLine();
+        Console.WriteLine("!!! NOTE: Please enter a valid option or press 'Q' to exit. !!!");
+        Console.WriteLine();
+    }
+} while (input.ToLower() != "q" && numberOfTests <= 10);
