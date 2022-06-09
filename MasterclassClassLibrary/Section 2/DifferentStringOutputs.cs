@@ -1,4 +1,4 @@
-﻿namespace MasterclassLibrary.Section2
+﻿namespace MasterclassLibrary.Section_2
 {
     public class DifferentStringOutputs
     {

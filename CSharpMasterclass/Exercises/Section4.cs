@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CSharpMasterclass.Exercises
 {
-    public class Section4Exercises
+    public class Section4
     {
         public void ExecuteExercise(string exerciseName)
         {
@@ -40,7 +40,9 @@ namespace CSharpMasterclass.Exercises
             Console.Write("Password: ");
             loginPassword = Console.ReadLine().ToLower();
 
+            Console.WriteLine("===================================================================");
             Console.WriteLine(checkUser.CheckLogin(loginUsername, loginPassword));
+            Console.WriteLine("===================================================================");
         }
 
         public void Exercise2()
@@ -54,9 +56,9 @@ namespace CSharpMasterclass.Exercises
             score = Convert.ToInt32(Console.ReadLine());
             Console.Write("Player name: ");
             playerName = Console.ReadLine();
-            Console.WriteLine("===========================================");
+            Console.WriteLine("===================================================================");
             Console.WriteLine(playerScore.CheckForNewHighScore(score, playerName));
-            Console.WriteLine("===========================================");
+            Console.WriteLine("===================================================================");
         }
 
         public void Exercise3()
@@ -72,10 +74,13 @@ namespace CSharpMasterclass.Exercises
             try
             {
                 temperature = Convert.ToInt32(temperatureInput);
+                Console.WriteLine("===================================================================");
                 Console.WriteLine(temperatureCheck.CheckTemperatureValue(temperature));
+                Console.WriteLine("===================================================================");
             }
             catch
             {
+                Console.WriteLine("-------------------------------------------------------------------");
                 Console.WriteLine("The current input is not a valid temperature.");
             }
         }

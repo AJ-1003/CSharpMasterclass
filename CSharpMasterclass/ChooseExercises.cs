@@ -11,10 +11,14 @@ namespace CSharpMasterclass
     {
         public void ChooseExercise(string area, int numberOfExercises)
         {
-            var section2 = new Section2Exercises();
-            var section3 = new Section3Exercises();
-            var section4 = new Section4Exercises();
-            var section5 = new Section5Exercises();
+            var section2 = new Section2();
+            var section3 = new Section3();
+            var section4 = new Section4();
+            var section5 = new Section5();
+            var section6 = new Section6();
+            var section7 = new Section7();
+            var section9 = new Section10();
+            var section10 = new Section10();
 
             Console.WriteLine("Choose the exercise that needs to be tested:");
             for (int i = 1; i <= numberOfExercises; i++)
@@ -39,6 +43,18 @@ namespace CSharpMasterclass
                     break;
                 case "4":
                     section5.ExecuteExercise($"Exercise{exerciseNumber}");
+                    break;
+                case "5":
+                    section6.ExecuteExercise($"Exercise{exerciseNumber}");
+                    break;
+                case "6":
+                    section7.ExecuteExercise($"Exercise{exerciseNumber}");
+                    break;
+                case "7":
+                    section9.ExecuteExercise($"Exercise{exerciseNumber}");
+                    break;
+                case "8":
+                    section10.ExecuteExercise($"Exercise{exerciseNumber}");
                     break;
                 default:
                     break;

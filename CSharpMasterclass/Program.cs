@@ -1,7 +1,7 @@
 ﻿using CSharpMasterclass;
-using static System.Net.Mime.MediaTypeNames;
 
 var exerciseChoice = new ChooseExercises();
+var options = new string[] { "1", "2", "3", "4", "5", "6", "7", "8" };
 string input;
 int numberOfTests = 1;
 
@@ -15,13 +15,17 @@ do
     Console.WriteLine(
         "1: Section 2\n" +
         "2: Section 3\n" +
-        "3: Section 4" +
-        "4: Section 5");
+        "3: Section 4\n" +
+        "4: Section 5\n" +
+        "5: Section 6\n" +
+        "6: Section 7\n" +
+        "7: Section 9\n" +
+        "8: Section 10");
 
     Console.Write("-> ");
     input = Console.ReadLine();
 
-    if (input == "1" || input == "2" || input == "3" || input == "4")
+    if (options.Contains(input))
     {
         switch (input)
         {
@@ -40,6 +44,22 @@ do
             case "4":
                 Console.WriteLine();
                 exerciseChoice.ChooseExercise(input, 1);
+                break;
+            case "5":
+                Console.WriteLine();
+                exerciseChoice.ChooseExercise(input, 2);
+                break;
+            case "6":
+                Console.WriteLine();
+                exerciseChoice.ChooseExercise(input, 4);
+                break;
+            case "7":
+                Console.WriteLine();
+                exerciseChoice.ChooseExercise(input, 4);
+                break;
+            case "8":
+                Console.WriteLine();
+                exerciseChoice.ChooseExercise(input, 4);
                 break;
             default:
                 break;

@@ -1,4 +1,4 @@
-﻿using MasterclassLibrary.Section2;
+﻿using MasterclassLibrary.Section_2;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CSharpMasterclass.Exercises
 {
-    public class Section2Exercises
+    public class Section2
     {
         public void ExecuteExercise(string exerciseName)
         {
@@ -29,10 +29,12 @@ namespace CSharpMasterclass.Exercises
             userInput = Console.ReadLine();
 
             var result = stringOutput.PrintDifferentStringOuputs(userInput);
+            Console.WriteLine("===================================================================");
             foreach (var item in result)
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine("===================================================================");
         }
 
         public void Exercise2()
@@ -61,7 +63,9 @@ namespace CSharpMasterclass.Exercises
             Console.Write("Lastname: ");
             lastName = Console.ReadLine();
 
+            Console.WriteLine("===================================================================");
             Console.WriteLine($"Hello, {concatName.PrintUserInputOnOneLine(firstName, lastName)}");
+            Console.WriteLine("===================================================================");
         }
 
         public void Exercise3()
@@ -72,7 +76,9 @@ namespace CSharpMasterclass.Exercises
             Console.WriteLine("Enter a value to convert to a whole number.");
             Console.Write("-> ");
             userString = Console.ReadLine();
+            Console.WriteLine("===================================================================");
             Console.WriteLine(convertString.ConvertStringNumberToInt(userString));
+            Console.WriteLine("===================================================================");
         }
     }
 }

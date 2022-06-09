@@ -1,4 +1,4 @@
-﻿using MasterclassLibrary.Section_4;
+﻿using MasterclassLibrary.Section_3;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CSharpMasterclass.Exercises
 {
-    public class Section3Exercises
+    public class Section3
     {
         public void ExecuteExercise(string exerciseName)
         {
@@ -30,10 +30,12 @@ namespace CSharpMasterclass.Exercises
                 listOfFriends.Add(Console.ReadLine());
             }
 
+            Console.WriteLine("===================================================================");
             foreach (var friend in listOfFriends)
             {
                 Console.WriteLine(friends.GreetFriend(friend));
             }
+            Console.WriteLine("===================================================================");
         }
     }
 }

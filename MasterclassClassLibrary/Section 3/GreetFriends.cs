@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MasterclassLibrary.Section_4
+namespace MasterclassLibrary.Section_3
 {
     public class GreetFriends
     {
