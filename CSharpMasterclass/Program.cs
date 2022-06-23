@@ -1,7 +1,7 @@
 ﻿using CSharpMasterclass;
 
 var exerciseChoice = new ChooseExercises();
-var options = new string[] { "1", "2", "3", "4", "5", "6", "7", "8" };
+var options = new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 string input;
 int numberOfTests = 1;
 
@@ -20,7 +20,9 @@ do
         "5: Section 6\n" +
         "6: Section 7\n" +
         "7: Section 9\n" +
-        "8: Section 10");
+        "8: Section 10\n" +
+        "9: Section 11\n" +
+        "10: Section 12");
 
     Console.Write("-> ");
     input = Console.ReadLine();
@@ -60,6 +62,14 @@ do
             case "8":
                 Console.WriteLine();
                 exerciseChoice.ChooseExercise(input, 4);
+                break;
+            case "9":
+                Console.WriteLine();
+                exerciseChoice.ChooseExercise(input, 6);
+                break;
+            case "10":
+                Console.WriteLine();
+                exerciseChoice.ChooseExercise(input, 1);
                 break;
             default:
                 break;

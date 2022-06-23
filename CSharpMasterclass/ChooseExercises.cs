@@ -19,6 +19,8 @@ namespace CSharpMasterclass
             var section7 = new Section7();
             var section9 = new Section10();
             var section10 = new Section10();
+            var section11 = new Section11();
+            var section12 = new Section12();
 
             Console.WriteLine("Choose the exercise that needs to be tested:");
             for (int i = 1; i <= numberOfExercises; i++)
@@ -55,6 +57,12 @@ namespace CSharpMasterclass
                     break;
                 case "8":
                     section10.ExecuteExercise($"Exercise{exerciseNumber}");
+                    break;
+                case "9":
+                    section11.ExecuteExercise($"Exercise{exerciseNumber}");
+                    break;
+                case "10":
+                    section12.ExecuteExercise($"Exercise{exerciseNumber}");
                     break;
                 default:
                     break;
